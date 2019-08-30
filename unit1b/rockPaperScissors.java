@@ -48,8 +48,8 @@ public class rockPaperScissors{
                 }
                 String botentv = "";
                 String plentv = "";
-                if(botenter==1){botentv="Rock";}if(botenter==2){botentv="Paper";}if(botenter==1){botentv="Scissors";}
-                if(plenter==1){plentv="Rock";}if(plenter==2){plentv="Paper";}if(plenter==1){plentv="Scissors";}
+                if(botenter==1){botentv="Rock";}if(botenter==2){botentv="Paper";}if(botenter==3){botentv="Scissors";}
+                if(plenter==1){plentv="Rock";}if(plenter==2){plentv="Paper";}if(plenter==3){plentv="Scissors";}
                 System.out.println("You chose "+plentv+", and the bot chose "+botentv+".");
             }
          }
