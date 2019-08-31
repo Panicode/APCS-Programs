@@ -1,0 +1,26 @@
+public class leastToGreatestTwo {
+    public int [] sort(int[] sorter) {
+        int[] sorted = sorter.clone();
+        for (int i = 0; i < sorted.length; i++) {
+            for (int j = i+1; j < sorted.length; j++) {
+                if ( (sorted[i] > sorted[j]) && (i != j) ) {
+                    int temp = sorted[j];
+                    sorted[j] = sorted[i];
+                    sorted[i] = temp;
+                }
+            }
+        }
+        return sorted;
+    }
+    public static void main(String[] args){
+        leastToGreatestTwo list1 = new leastToGreatestTwo();
+        int[] array=new int[5];
+        for(int j=0;j<array.length;j++){
+            array[j]=(int)(Math.random()*30+20);
+        }
+        int[] arsorted = list1.sort(array);
+        for (int i = 0; i < arsorted.length; i++) {
+            System.out.println(arsorted[i]);
+        }
+    }
+}
