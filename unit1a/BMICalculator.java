@@ -13,6 +13,6 @@ public class BMICalculator{
       double heigc=(height*0.0254);
       double sqhei=Math.pow(heigc,2);
       double BMI=(kiloc/sqhei);
-      System.out.print("For a weight of "+kiloc+" pounds and a height of "+heigc+" inches, Your BMI is: "+Math.round(BMI));
+      System.out.print("For a weight of "+weight+" pounds and a height of "+height+" inches, Your BMI is: "+Math.round(BMI));
   }
 }
