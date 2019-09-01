@@ -1,6 +1,8 @@
 # APCS-Programs
 SCHS 19-20
 
-Unit1a - COMPLETE;
-Unit1b - COMPLETE;
-Unit2 - INCOMPLETE;
+Unit1a - COMPLETE
+
+Unit1b - COMPLETE
+
+Unit2 - INCOMPLETE
