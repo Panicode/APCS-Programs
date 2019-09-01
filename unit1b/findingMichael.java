@@ -9,10 +9,10 @@ public class findingMichael{
         System.out.println("Michael Jackson has arrived."+"\n");
         boolean foundMichael=false;
         for(int i=0;i<artists.length;i++){
-            if(foundMichael==false){System.out.println("No Michael in music("+i+")");foundMichael=false;}
             if(artists[i].contains("Michael Jackson")){
                 System.out.println("We found Michael, He was in music("+i+")");foundMichael=true;
             }
+            if(foundMichael==false){System.out.println("No Michael in music("+i+")");foundMichael=false;}
         }
     }
 }
