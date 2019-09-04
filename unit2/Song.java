@@ -21,7 +21,7 @@ public class Song{
         System.out.println(obj);
     }
 }
-class SongDriver{
+class SongDriver{ //This is a new class that was needed for 2.1
     String name;
     int year;
     String artist;
@@ -39,8 +39,8 @@ class SongDriver{
         return "The song's name is: "+name+", and the song's date is: "+year+", and the song's artist is: "+artist;
     }
     public static void main(String args[]){
-        Song song1=new Song();
-        Song song2=new Song("Feel Good Inc.",2005,"Gorillaz");
+        SongDriver song1=new SongDriver();
+        SongDriver song2=new SongDriver("Feel Good Inc.",2005,"Gorillaz");
         System.out.println("Song1:");
         System.out.println(song1);
         System.out.println("Song2:");
