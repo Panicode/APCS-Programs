@@ -21,7 +21,10 @@ public class Song{
         System.out.println(obj);
     }
 }
-class SongDriver{ //This is a new class that was needed for 2.1
+
+
+
+public class SongDriver{ //This is a new class that was needed for 2.1
     String name;
     int year;
     String artist;
