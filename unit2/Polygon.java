@@ -29,7 +29,6 @@ public class Polygon{
 
 
 
-//Seperate file!
 public class PolygonDriver{
     public static void main(String []args){
         Polygon quadrilateral=new Polygon();
@@ -41,7 +40,11 @@ public class PolygonDriver{
         for(int i=0;i<triv.length;i++){
             triva=triva+triv[i];
         }
+        double trir=triv[0]/Math.sqrt(3);
+        double tria=2*Math.PI*trir;
+        double trica=tria/trir;
         System.out.println("The primeter is: "+triva);
+        System.out.println("The central angle is: "+trica);
         //tri
         //pent
         int trivd[]={8,8,8,8,8};
