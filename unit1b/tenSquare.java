@@ -4,8 +4,7 @@ public class tenSquare{
         for(int i=1;i<=10;i++){
             double ic=Math.pow(i,2);
             long icr=Math.round(ic);
-            double randch=icr-ic;
-            int rand=(int)(Math.random()*randch+1);
+            int rand=(int)(Math.random()*icr+i);
             System.out.println(i+"\t"+icr+"\t"+rand);
         }
 }}
