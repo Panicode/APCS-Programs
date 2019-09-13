@@ -13,7 +13,7 @@ class Clock{
         this.hours=h;
     }
     public String toString(){
-       return seconds+":"+minutes+":"+seconds;
+       return hours+":"+minutes+":"+seconds;
     }
     public static void main(String args[]){
         Clock obj=new Clock(1,1,1);
