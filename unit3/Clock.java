@@ -34,7 +34,7 @@ class Clock{
 }
 
 public class ClockDriver{ //Seperate file!
-    public static void main(){
+    public static void main(String []args){
         Clock obj1=new Clock();
         System.out.println(obj1);
         obj1.setTime(1,1,1);
