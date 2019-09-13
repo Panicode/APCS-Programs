@@ -9,4 +9,4 @@ Unit1b - COMPLETE
 
 Unit2 - COMPLETE (Polygon is stupid so it's on hiatus)
 
-Unit3 - INCOMPLETE
+Unit3 - INCOMPLETE (On the website, the "Song" class isn't completed, wait until Mr. O fixes it)
