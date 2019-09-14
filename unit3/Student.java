@@ -6,6 +6,12 @@ public class Student{
     double grades[]=new double[5];
     public void setGPA(double eng,double math,double sci,double FA,double SS){
         grades[0]=eng;grades[1]=math;grades[2]=sci;grades[3]=FA;grades[4]=SS;
+        double ee=0;
+        for(int i=0;i<grades.length;i++){
+            ee+=grades[i];
+        }
+        ee=ee/5;
+        this.GPA=ee;
     }
     public double calcGPA(){
         double cc=0;
@@ -47,8 +53,11 @@ public class StudentDriver{ //Seperate file!
     public static void main(String args[]){
         //Student frosh001=new Student("Barack","Obama",2.3,2023);
         //System.out.println(frosh001);
-        double georgeG[]={2.4,5,3.5,2.3,3.7};
-        Student ex001=new Student("George","Bush",2020,georgeG);
+        double geG[]={4.0,4,3.5,4,4};
+        Student ex001=new Student("Joe","Senior",2020,geG);
+        System.out.println(ex001);
+        System.out.println("~Grad Change!~");
+        ex001.setGPA(4.0,4.0,4.0,4.0,4.0);
         System.out.println(ex001);
     }
 }
