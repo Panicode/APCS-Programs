@@ -1,4 +1,4 @@
-public class uniCompare{
+public class uniCompare{ //3.5
     public static void main(String []args){
         String school1=new String("Stanford");
         String school2=new String("Caltech");
