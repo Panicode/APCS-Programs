@@ -3,6 +3,7 @@ public class Student{
     String lastName;
     double GPA;
     int gradYear;
+    String gradeList="";
     double grades[]=new double[5];
     public void setGPA(double eng,double math,double sci,double FA,double SS){
         grades[0]=eng;grades[1]=math;grades[2]=sci;grades[3]=FA;grades[4]=SS;
@@ -12,6 +13,19 @@ public class Student{
         }
         ee=ee/5;
         this.GPA=ee;
+    }
+    public String getGrade(){
+        if(GPA>4){
+            return "A";
+        }else if(GPA>3){
+            return "B";
+        }else if(GPA>2){
+            return "C";
+        }else if(GPA>1){
+            return "D";
+        }else{
+            return "F";
+        }
     }
     public double calcGPA(){
         double cc=0;
@@ -43,7 +57,11 @@ public class Student{
         this.GPA=calcGPA();
     }
     public String toString(){
-        return "Name: "+firstName+" "+lastName+"\n"+"Graduation year: "+gradYear+"\n"+"GPA: "+GPA;
+        gradeList="";
+        for(int i=0;i<grades.length;i++){
+            gradeList=gradeList+grades[i]+" ";
+        }
+        return "Name: "+firstName+" "+lastName+"\n"+"Graduation year: "+gradYear+"\n"+"Average GPA: "+GPA+"\n"+"Grade: "+getGrade()+"\n"+gradeList;
     }
 }
 
@@ -56,7 +74,8 @@ public class StudentDriver{ //Seperate file!
         double geG[]={4.0,4,3.5,4,4};
         Student ex001=new Student("Joe","Senior",2020,geG);
         System.out.println(ex001);
-        System.out.println("~Grad Change!~");
+        
+        System.out.println("~Grad Change!~"); //"Grad Change" code for 3.3
         ex001.setGPA(4.0,4.0,4.0,4.0,4.0);
         System.out.println(ex001);
     }
