@@ -4,12 +4,12 @@
 
 Website: https://sites.google.com/capousd.org/orourkeapcompscia/home
 
-Unit1a - COMPLETE
+- [x] Unit1a
 
-Unit1b - COMPLETE
+- [x] Unit1b
 
-Unit2 - COMPLETE (Polygon is stupid so it's on hiatus)
+- [x] Unit2 (Polygon is stupid so it's on hiatus)
 
-Unit3 - COMPLETE (On the website, the "Song" class isn't completed, wait until Mr. O fixes it)
+- [x] Unit3 (On the website, the "Song" class isn't completed, wait until Mr. O fixes it)
 
-Unit4 - INCOMPLETE
+- [] Unit4 - INCOMPLETE
