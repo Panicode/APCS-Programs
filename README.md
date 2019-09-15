@@ -1,5 +1,5 @@
 <p align="center">
-  <b># Welcome to The APCS Program Repository! :purple_heart:</b><br>
+  <h1>Welcome to The APCS Program Repository! :purple_heart:</h1><br>
 </p>
 
 ![Logo](https://i.imgur.com/mZGHSXp.png)
