@@ -1,4 +1,7 @@
-# APCS-Programs
+# Welcome to The APCS Program Repository!
+
+![Logo](https://i.imgur.com/mZGHSXp.png)
+
 SCHS 19-20
 
 Website: https://sites.google.com/capousd.org/orourkeapcompscia/home
