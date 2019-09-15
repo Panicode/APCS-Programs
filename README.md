@@ -2,8 +2,6 @@
 
 ![Logo](https://i.imgur.com/mZGHSXp.png)
 
-SCHS 19-20
-
 Website: https://sites.google.com/capousd.org/orourkeapcompscia/home
 
 Unit1a - COMPLETE
