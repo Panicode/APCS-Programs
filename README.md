@@ -13,3 +13,7 @@ Website: https://sites.google.com/capousd.org/orourkeapcompscia/home
 - [x] Unit3 (On the website, the "Song" class isn't completed, wait until Mr. O fixes it)
 
 - [ ] Unit4
+
+- [ ] Unit5
+
+- [ ] Unit6
