@@ -1,7 +1,7 @@
 # Welcome to The APCS Program Repository! :purple_heart:
 ![Logo](https://i.imgur.com/mZGHSXp.png)
 
-<a href="Website">https://sites.google.com/capousd.org/orourkeapcompscia/home</a>
+<a href="https://sites.google.com/capousd.org/orourkeapcompscia/home">Website</a>
 
 ###### Units:
 
