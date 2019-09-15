@@ -1,4 +1,4 @@
-# Welcome to The APCS Program Repository!
+# Welcome to The APCS Program Repository! :purple_heart:
 
 ![Logo](https://i.imgur.com/mZGHSXp.png)
 
