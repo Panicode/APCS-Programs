@@ -8,12 +8,19 @@ Website: https://sites.google.com/capousd.org/orourkeapcompscia/home
 
 - [x] Unit1b
 
-- [x] Unit2 (Polygon is stupid so it's on hiatus)
+- [x] Unit2*
 
-- [x] Unit3 (On the website, the "Song" class isn't completed, wait until Mr. O fixes it)
+- [x] Unit3**
 
 - [ ] Unit4
 
 - [ ] Unit5
 
 - [ ] Unit6
+
+
+
+
+
+*Polygon is stupid so it's on hiatus
+**On the website, the "Song" class isn't completed, wait until Mr. O fixes it
