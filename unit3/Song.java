@@ -28,8 +28,4 @@ public class Song{
     public String toString(){
         return "The song's name is: "+name+"\n"+"the song's date is: "+yearReleased+"\n"+"the song's artist is: "+artist;
     }
-    public static void main(String args[]){
-        Song obj=new Song();
-        System.out.println(obj);
-    }
 }
