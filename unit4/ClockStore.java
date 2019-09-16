@@ -1,4 +1,4 @@
-public class ClockStore{
+public class ClockStore{ //Make sure to have the "Clock" class!
     private Clock clocksInStock[]=new Clock[3];
     public ClockStore(){
         clocksInStock[0]=new Clock(12,30,45);
