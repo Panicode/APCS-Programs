@@ -1,4 +1,4 @@
-class Clock{
+public class Clock{
     int seconds;
     int minutes;
     int hours;
