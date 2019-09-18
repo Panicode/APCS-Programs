@@ -36,5 +36,9 @@ public class Roster2Driver{ //seperate file!
         apComputerScience.addStudent(stu3);
         System.out.println("Here's the class!");
         System.out.println(apComputerScience);
+        System.out.println("Oop! Time to drop a student!");
+        apComputerScience.dropStudent("Dux");
+        System.out.println("Here's a revised list!");
+        System.out.println(apComputerScience);
     }
 }
