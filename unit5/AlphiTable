@@ -1,3 +1,4 @@
+//5.4
 public class AlphiTable{
     public static void main(String args[]){
         String arr[][]=new String[8][8];
