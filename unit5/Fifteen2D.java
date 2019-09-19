@@ -1,3 +1,4 @@
+//5.2
 public class Fifteen2D{
     public static void main(String args[]){
         int arr[][]=new int[5][3];
