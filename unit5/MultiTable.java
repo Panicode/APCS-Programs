@@ -1,3 +1,4 @@
+//5.3
 public class MultiTable{
     public static void main(String args[]){
         int arr[][]=new int[8][8];
@@ -8,7 +9,7 @@ public class MultiTable{
         }
         for(int k=0;k<arr.length;k++){
             for(int l=0;l<arr[0].length;l++){
-                System.out.print(arr[k][l]+" ");
+                System.out.print(arr[k][l]+" "); //Might wanna change the " " in this to "\t"
             }
             System.out.println();
         }
