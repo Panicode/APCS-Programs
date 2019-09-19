@@ -1,34 +1,12 @@
 class MySong{
     String name;
-    int yearReleased;
-    String artist;
-    public String convertToMinSec(int secv){
-        int sec=secv%60;
-        int min=secv-sec;
-        return "The length of the song is: "+min+" minutes and "+sec+" seconds.";
-    }
-    public int getYearReleased(){
-       return yearReleased;
-    }
-    public void setYearReleased(int ye){
-        yearReleased=ye;
-    }
-    public MySong(){
-        name="The good life";
-        yearReleased=1996;
-        artist="Weezer";
-    }
-    public MySong(String name,int year,String artist){
+    int rating;
+    public MySong(String name,int ye){
         this.name=name;
-        this.yearReleased=year;
-        this.artist=artist;
-    }
-    public MySong(String name,int year){
-        this.name=name;
-        this.yearReleased=year;
+        this.rating=ye;
     }
     public String toString(){
-        return "The song's name is: "+name+"\n"+"the song's date is: "+yearReleased+"\n"+"the song's artist is: "+artist;
+        return "The song's name is: "+name+"\n"+"the song's rating is: "+rating;
     }
 }
 public class Jukebox{
@@ -46,6 +24,18 @@ public class Jukebox{
         songList[2][1] = new MySong( "Right as Rain", 4 ); 
         songList[2][2] = new MySong( "Beat It", 5 ); 
         songList[2][3] = new MySong( "Bust a Move", 4 );   
-        
+    }
+    public String toString(){
+        String prnt="";
+        for(int i=0;i<songList.length;i++){
+            for(int j=0;j<songList[0].length;j++){
+                prnt+="The name of the song is: "+songList[i][j].name+"\n"+"The rating is: "+songList[i][j].rating+"\n";
+            }
+        }
+        return prnt;
+    }
+    public static void main(String args[]){
+        Jukebox obj1= new Jukebox();
+        System.out.println(obj1);
     }
 }
