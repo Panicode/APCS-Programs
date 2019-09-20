@@ -3,8 +3,12 @@ public class GuessingGame{
     public static void main(String args[]){
         Scanner input=new Scanner(System.in);
         boolean yesPlay=true;
+        boolean ifStart=false;
         while(yesPlay=true){
-            System.out.println("Do you wanna play my guessing game? y/n");
+            if(ifStart==false){
+                System.out.println("Do you wanna play my guessing game? y/n");
+                ifStart=true;
+            }
             String ans=input.nextLine();
             if(ans.contains("y")&&ans.contains("n")){
                 System.out.println("\f"+"Invalid answer! Please attempt again!");
@@ -45,11 +49,11 @@ public class GuessingGame{
                 int guessCount=0;
                 boolean gameWon=false;
                 boolean startA=false;
+                int rowOff=0;
+                int colOff=0;
                 while(gameWon==false){
                     int gaRow=0;
                     int gaCol=0;
-                    int rowOff=0;
-                    int colOff=0;
                     boolean invalCheck=false;
                     System.out.println("\f");
                     System.out.println("X = Hasn't been guessed"+"\n"+"A = Has been guessed before");
@@ -59,7 +63,7 @@ public class GuessingGame{
                         }
                         System.out.println();
                     }
-                    if(startA=true){
+                    if(startA==true){
                         System.out.println("\n"+"Your last input is "+rowOff+" rows off, and "+colOff+" columns off."+"\n");
                     }
                     while(invalCheck==false){
@@ -80,7 +84,9 @@ public class GuessingGame{
                         gameWon=true;
                     }else{
                         visualBoard[gaRow-1][gaCol-1]="A";
-                        
+                        rowOff=Math.abs(ranRow-(gaRow-1));
+                        colOff=Math.abs(ranCol-(gaCol-1));
+                        startA=true;
                     }
                 }
                 System.out.println("\n"+"\n"+"Wanna play again? y/n");
