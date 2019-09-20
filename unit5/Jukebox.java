@@ -25,6 +25,21 @@ public class Jukebox{
         songList[2][2] = new MySong( "Beat It", 5 ); 
         songList[2][3] = new MySong( "Bust a Move", 4 );   
     }
+    public void randomSong(){
+        int randrow=(int)(Math.random()*songList.length);
+        int randcol=(int)(Math.random()*songList[0].length);
+        System.out.println("The random song is: "+songList[randrow][randcol].name);
+    }
+    public void playSongofRating(int rat){
+        System.out.println("The songs with the rating of "+rat+" are:");
+        for(int i=0;i<songList.length;i++){
+            for(int j=0;j<songList[0].length;j++){
+                if(songList[i][j].rating==rat){
+                    System.out.println(songList[i][j].name);
+                }
+            }
+        }
+    }
     public String toString(){
         String prnt="";
         for(int i=0;i<songList.length;i++){
@@ -37,5 +52,7 @@ public class Jukebox{
     public static void main(String args[]){
         Jukebox obj1= new Jukebox();
         System.out.println(obj1);
+        obj1.randomSong();
+        obj1.playSongofRating(4); //rating of 4
     }
 }
