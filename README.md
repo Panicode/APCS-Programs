@@ -11,11 +11,11 @@
 
 - [x] Unit2*
 
-- [x] Unit3**
+- [x] Unit3
 
 - [x] Unit4
 
-- [ ] Unit5
+- [x] Unit5
 
 - [ ] Unit6
 
@@ -25,4 +25,4 @@
 
 *Polygon is stupid so it's on hiatus
 
-**On the website, the "Song" class isn't completed, wait until Mr. O fixes it
+Note: All units are subject to change, so I'll update the progress accordingly.
