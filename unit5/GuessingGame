@@ -49,13 +49,14 @@ public class GuessingGame{
                     int gaCol=0;
                     boolean invalCheck=false;
                     System.out.println("\f");
+                    System.out.println("X = Hasn't been guessed"+"\n"+"A = Has been guessed before");
                     for(int k=0;k<visualBoard.length;k++){
                         for(int l=0;l<visualBoard[0].length;l++){
                             System.out.print(visualBoard[k][l]+" ");
                         }
                         System.out.println();
                     }
-                    while(invalCheck=false){
+                    while(invalCheck==false){
                         System.out.println("\n"+"Input your row guess!");
                         gaRow=input.nextInt();
                         System.out.println("\n"+"Input your row guess!");
@@ -64,8 +65,22 @@ public class GuessingGame{
                             System.out.println("One of the inputs are zero! Try again!"+"\f");
                         }else{invalCheck=true;}
                     }
+                    if(gameBoard[gaRow][gaCol]==0){ //if won statement
+                        System.out.println("\f"+" _     _                                  _ "+"\n"+"| |   | |                                | |"+"\n"+
+                        "| |___| | ___  _   _    _ _ _  ___  ____ | |"+"\n"+"|_____  |/ _ "+"\\"+"| | | |  | | | |/ _ "+"\\"+"|  _ "+"\\"+"|_|"+"\n"+" _____| | |_| | |_| |  | | | | |_| | | | |_ "+"\n"+
+                        "(_______|"+"\\"+"___/|____/    "+"\\"+"___/ "+"\\"+"___/|_| |_|_|"+"\n"+"\n"+"Amazing job!");
+                        gameWon=true;
+                    }
                 }
-                
+                System.out.println("\f"+"Wanna play again? y/n");
+                String ansD=input.nextLine();
+                if(ansD.contains("y")&&ansD.contains("n")){
+                    System.out.println("\f"+"Invalid answer! Please attempt again!");
+                }else if(ansD.contains("n")){
+                    System.out.println("\f"+"See ya! Thanks for playing!");
+                    yesPlay=false;
+                    break;
+                }
             }else{System.out.println("\f"+"Invalid answer! Please attempt again!");}
         }
     }
