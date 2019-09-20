@@ -44,9 +44,12 @@ public class GuessingGame{
                 }
                 int guessCount=0;
                 boolean gameWon=false;
+                boolean startA=false;
                 while(gameWon==false){
                     int gaRow=0;
                     int gaCol=0;
+                    int rowOff=0;
+                    int colOff=0;
                     boolean invalCheck=false;
                     System.out.println("\f");
                     System.out.println("X = Hasn't been guessed"+"\n"+"A = Has been guessed before");
@@ -56,30 +59,37 @@ public class GuessingGame{
                         }
                         System.out.println();
                     }
+                    if(startA=true){
+                        System.out.println("\n"+"Your last input is "+rowOff+" rows off, and "+colOff+" columns off."+"\n");
+                    }
                     while(invalCheck==false){
                         System.out.println("\n"+"Input your row guess!");
                         gaRow=input.nextInt();
                         System.out.println("\n"+"Input your row guess!");
                         gaCol=input.nextInt();
-                        if(gaRow==0||gaCol==0){
-                            System.out.println("One of the inputs are zero! Try again!"+"\f");
+                        if(gaRow<=0||gaCol<=0){
+                            System.out.println("One or more of the inputs are zero! Try again!");
+                        }else if(gaRow>gameBoard.length||gaCol>gameBoard[0].length){
+                            System.out.println("One or more of the inputs are bigger than the board! Try again!");
                         }else{invalCheck=true;}
                     }
-                    if(gameBoard[gaRow][gaCol]==0){ //if won statement
+                    if(gameBoard[gaRow-1][gaCol-1]==0){ //if won statement
                         System.out.println("\f"+" _     _                                  _ "+"\n"+"| |   | |                                | |"+"\n"+
                         "| |___| | ___  _   _    _ _ _  ___  ____ | |"+"\n"+"|_____  |/ _ "+"\\"+"| | | |  | | | |/ _ "+"\\"+"|  _ "+"\\"+"|_|"+"\n"+" _____| | |_| | |_| |  | | | | |_| | | | |_ "+"\n"+
                         "(_______|"+"\\"+"___/|____/    "+"\\"+"___/ "+"\\"+"___/|_| |_|_|"+"\n"+"\n"+"Amazing job!");
                         gameWon=true;
+                    }else{
+                        visualBoard[gaRow-1][gaCol-1]="A";
+                        
                     }
                 }
-                System.out.println("\f"+"Wanna play again? y/n");
+                System.out.println("\n"+"\n"+"Wanna play again? y/n");
                 String ansD=input.nextLine();
                 if(ansD.contains("y")&&ansD.contains("n")){
                     System.out.println("\f"+"Invalid answer! Please attempt again!");
                 }else if(ansD.contains("n")){
                     System.out.println("\f"+"See ya! Thanks for playing!");
-                    yesPlay=false;
-                    break;
+                    yesPlay=false;break;
                 }
             }else{System.out.println("\f"+"Invalid answer! Please attempt again!");}
         }
