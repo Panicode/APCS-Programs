@@ -17,18 +17,55 @@ public class GuessingGame{
                 "There's a gameboard of a player-specificed size"+"\n"+"and you have to guess which coordinate has a 0 in it!"
                 +"\n"+"I'll tell you how close or far you are!"+"\n"+"\n"+"Let's start out by choosing how many rows and columns you want!");
                 boolean ifActive=false;
-                int rows=0;
+                int row=0;
                 int col=0;
                 while(ifActive==false){
                     System.out.println("Please input the amount of rows you want.");
-                    rows=input.nextInt();
+                    row=input.nextInt();
                     System.out.println("Please input the amount of columns you want.");
                     col=input.nextInt();
-                    if(rows==0||col==0){
+                    if(row==0||col==0){
                         System.out.println("One of the numbers are zero! Try again!");
-                    }else{ifActive=true;break;}
-                    
+                    }else{ifActive=true;}}
+                int gameBoard[][]=new int[row][col];
+                for(int i=0;i<gameBoard.length;i++){ //filling array
+                    for(int j=0;j<gameBoard[0].length;j++){
+                        gameBoard[i][j]=(int)(Math.random()*100+1);
+                    }
                 }
+                int ranRow=(int)(Math.random()*row);
+                int ranCol=(int)(Math.random()*col);
+                gameBoard[ranRow][ranCol]=0;
+                String visualBoard[][]=new String[row][col];
+                for(int i=0;i<visualBoard.length;i++){ //filling array (this is for graphics)
+                    for(int j=0;j<visualBoard[0].length;j++){
+                        visualBoard[i][j]="X";
+                    }
+                }
+                int guessCount=0;
+                boolean gameWon=false;
+                while(gameWon==false){
+                    int gaRow=0;
+                    int gaCol=0;
+                    boolean invalCheck=false;
+                    System.out.println("\f");
+                    for(int k=0;k<visualBoard.length;k++){
+                        for(int l=0;l<visualBoard[0].length;l++){
+                            System.out.print(visualBoard[k][l]+" ");
+                        }
+                        System.out.println();
+                    }
+                    while(invalCheck=false){
+                        System.out.println("\n"+"Input your row guess!");
+                        gaRow=input.nextInt();
+                        System.out.println("\n"+"Input your row guess!");
+                        gaCol=input.nextInt();
+                        if(gaRow==0||gaCol==0){
+                            System.out.println("One of the inputs are zero! Try again!"+"\f");
+                        }else{invalCheck=true;}
+                    }
+                }
+                
             }else{System.out.println("\f"+"Invalid answer! Please attempt again!");}
         }
     }
