@@ -1,0 +1,35 @@
+import java.util.Scanner;
+public class GuessingGame{
+    public static void main(String args[]){
+        Scanner input=new Scanner(System.in);
+        boolean yesPlay=true;
+        while(yesPlay=true){
+            System.out.println("Do you wanna play my guessing game? y/n");
+            String ans=input.nextLine();
+            if(ans.contains("y")&&ans.contains("n")){
+                System.out.println("\f"+"Invalid answer! Please attempt again!");
+            }else if(ans.contains("n")){
+                System.out.println("\f"+"That's rude, alright bye.");
+                yesPlay=false;
+                break;
+            }else if(ans.contains("y")){
+                System.out.println("\f"+"Okay! Let's play!"+"\n"+"\n"+"The rules of the game is simple,"+"\n"+
+                "There's a gameboard of a player-specificed size"+"\n"+"and you have to guess which coordinate has a 0 in it!"
+                +"\n"+"I'll tell you how close or far you are!"+"\n"+"\n"+"Let's start out by choosing how many rows and columns you want!");
+                boolean ifActive=false;
+                int rows=0;
+                int col=0;
+                while(ifActive==false){
+                    System.out.println("Please input the amount of rows you want.");
+                    rows=input.nextInt();
+                    System.out.println("Please input the amount of columns you want.");
+                    col=input.nextInt();
+                    if(rows==0||col==0){
+                        System.out.println("One of the numbers are zero! Try again!");
+                    }else{ifActive=true;break;}
+                    
+                }
+            }else{System.out.println("\f"+"Invalid answer! Please attempt again!");}
+        }
+    }
+}
