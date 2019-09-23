@@ -18,7 +18,7 @@ public class GuessingGame{
                 break;
             }else if(ans.contains("y")){
                 System.out.println("\f"+"Okay! Let's play!"+"\n"+"\n"+"The rules of the game is simple,"+"\n"+
-                "There's a gameboard of a player-specificed size"+"\n"+"and you have to guess which coordinate has a 0 in it!"
+                "There's a gameboard of a player-specified size"+"\n"+"and you have to guess which coordinate has a 0 in it!"
                 +"\n"+"I'll tell you how close or far you are!"+"\n"+"\n"+"Let's start out by choosing how many rows and columns you want!");
                 boolean ifActive=false;
                 int row=0;
@@ -69,7 +69,7 @@ public class GuessingGame{
                     while(invalCheck==false){
                         System.out.println("\n"+"Input your row guess!");
                         gaRow=input.nextInt();
-                        System.out.println("\n"+"Input your row guess!");
+                        System.out.println("\n"+"Input your column guess!");
                         gaCol=input.nextInt();
                         if(gaRow<=0||gaCol<=0){
                             System.out.println("One or more of the inputs are zero! Try again!");
