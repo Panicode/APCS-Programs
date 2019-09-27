@@ -26,3 +26,5 @@
 *Polygon is stupid so it's on hiatus
 
 Note: All units are subject to change, so I'll update the progress accordingly.
+
+If you're a fellow student in the APCS class, please don't copy+paste but instead learn from what I have written myself.
