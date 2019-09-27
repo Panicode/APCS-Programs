@@ -1,13 +1,12 @@
-//unfinished!
-
 import java.util.ArrayList;
 class Superhero{
-    public void getMotto(String motto){
+    String motto="";
+    public void getMotto(){
         System.out.println(motto);
     }
 }
 class GeorgeBush extends Superhero{
-    public void motto(){super.getMotto("whoa");}
+    public void getMotto(){System.out.println("whoa");}
     String bushPower="i have bushpower";
     String unique="very cool";
     public void GeorgeBushMethod(String bP){
@@ -15,7 +14,7 @@ class GeorgeBush extends Superhero{
     }
 }
 class Obama extends Superhero{
-    public void motto(){super.getMotto("nice");}
+    public void getMotto(){System.out.println("epic");}
     String obamaPower="obama power bro";
     public String basketBalls(String gg){
         if(gg.contains("Bruh")==true){
@@ -25,16 +24,17 @@ class Obama extends Superhero{
 }
 class JakeFromStateFarm extends Superhero{
     String jakePower="uhh";
-    public void motto(){super.getMotto("epic");}
+    public void getMotto(){System.out.println("awesome");}
 }
 public class SuperheroDriver{
     public static void main(String args[]){
+        Superhero obj1=new Obama();
         ArrayList<Superhero> superheroes = new ArrayList<Superhero>();
         superheroes.add(new GeorgeBush());
         superheroes.add(new Obama());   
         superheroes.add(new JakeFromStateFarm());
         for(int i=0;i<superheroes.size();i++){
-           superheroes.get(i).motto();
+           obj1.getMotto();
         }
     }
 }
