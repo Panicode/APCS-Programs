@@ -1,4 +1,4 @@
-public class MyShape{
+class MyShape{
     String name="";
     String color="";
     MyShape(String na, String co){
@@ -70,6 +70,14 @@ class MyTriangle extends MyShape{
         return leg1+leg2+base;
     }
 }
+public class MyShapeDriver{
+    public static void main(String args[]){
+        MyShape shapes[]=new MyShape[0];
+    }
+}
+
+
+
 
 
 
