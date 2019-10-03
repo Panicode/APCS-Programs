@@ -75,6 +75,20 @@ class MyTriangle extends MyShape{
         +leg2+"\nbase length: "+base+"\nheight: "+height;
     }
 }
+class MyCircle extends MyShape{
+    int radius=0;
+    double height=0;
+    MyCircle(String na, String co, int rad){
+        super(na, co);
+        radius=rad;
+    }
+    double getPerimeter(){
+        return Math.PI*2*radius;
+    }
+    String ToString(){
+        return name+"'s variables:\n"+"\ncolor: "+color;
+    }
+}
 public class MyShapeDriver{
     public static void main(String args[]){
         MyShape shapes[]=new MyShape[3];
