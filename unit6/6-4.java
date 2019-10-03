@@ -14,11 +14,8 @@ class MyRectangle extends MyShape{
     int width=0;
     MyRectangle(String na, String co, int len, int wid){
         super(na, co);
-        length=0;
-        width=0;
-    }
-    String ToString(){
-        return name+"'s variables:\n"+"\ncolor: "+color+"\nlength: "+length+"\nwidth: "+width;
+        length=len;
+        width=wid;
     }
     int getArea(){
         return length*width;
@@ -26,14 +23,17 @@ class MyRectangle extends MyShape{
     int getPerimeter(){
         return (length+width)*2;
     }
+    String ToString(){
+        return name+"'s variables:\n"+"\ncolor: "+color+"\nlength: "+length+"\nwidth: "+width;
+    }
 }
 class MyTrapezoid extends MyShape{
     int base1=0;
     int base2=0;
     int leg1=0;
     int leg2=0;
-    int height=0;
-    MyTrapezoid(String na, String co,int b1,int b2, int l1, int l2,int he){
+    double height=0;
+    MyTrapezoid(String na, String co,int b1,int b2, int l1, int l2,double he){
         super(na, co);
         base1=b1;
         base2=b2;
@@ -43,9 +43,9 @@ class MyTrapezoid extends MyShape{
     }
     String ToString(){
         return name+"'s variables:\n"+"\ncolor: "+color+"\nfirst base: "+base1+"\nsecond base: "+base2
-        +"\nfirst leg: "+leg1+"\nsecond leg: "+leg2;
+        +"\nfirst leg: "+leg1+"\nsecond leg: "+leg2+"\nheight: "+height;
     }
-    int getArea(){
+    double getArea(){
         return ((base1+base2)/2)*height;
     }
     int getPerimeter(){
@@ -56,30 +56,34 @@ class MyTriangle extends MyShape{
     int base=0;
     int leg1=0;
     int leg2=0;
-    int height=0;
-    MyTriangle(String na, String co, int ba, int le1, int le2, int he){
+    double height=0;
+    MyTriangle(String na, String co, int ba, int le1, int le2, double he){
         super(na, co);
         base=ba;
         leg1=le1;
         leg2=le2;
         height=he;
     }
-    String ToString(){
-        return name+"'s variables:\n"+"\ncolor: "+color;
-    }
-    int getArea(){
+    double getArea(){
         return (base*height)/2;
     }
     int getPerimeter(){
         return leg1+leg2+base;
     }
+    String ToString(){
+        return name+"'s variables:\n"+"\ncolor: "+color+"\nfirst leg: "+leg1+"\nsecond leg: "
+        +leg2+"\nbase length: "+base+"\nheight: "+height;
+    }
 }
 public class MyShapeDriver{
     public static void main(String args[]){
-        MyShape shapes[]=new MyShape[0];
-        shapes[0]=new MyRectangle();
-        shapes[1]=new MyTrapezoid();
-        shapes[2]=new MyTriangle();
+        MyShape shapes[]=new MyShape[3];
+        shapes[0]=new MyRectangle("Rectangle","green",10,15);
+        shapes[1]=new MyTrapezoid("Trapezoid","blue",10,15,7,7,6.54);
+        shapes[2]=new MyTriangle("Triangle","purple",5,5,5,4.33);
+        for(int i=0;i<shapes.length;i++){
+            System.out.println(shapes[i].ToString()+"\n");
+        }
     }
 }
 
