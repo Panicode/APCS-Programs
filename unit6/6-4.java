@@ -57,8 +57,12 @@ class MyTriangle extends MyShape{
     int leg1=0;
     int leg2=0;
     int height=0;
-    MyTriangle(String na, String co){
+    MyTriangle(String na, String co, int ba, int le1, int le2, int he){
         super(na, co);
+        base=ba;
+        leg1=le1;
+        leg2=le2;
+        height=he;
     }
     String ToString(){
         return name+"'s variables:\n"+"\ncolor: "+color;
@@ -73,9 +77,11 @@ class MyTriangle extends MyShape{
 public class MyShapeDriver{
     public static void main(String args[]){
         MyShape shapes[]=new MyShape[0];
+        shapes[0]=new MyRectangle();
+        shapes[1]=new MyTrapezoid();
+        shapes[2]=new MyTriangle();
     }
 }
-
 
 
 
