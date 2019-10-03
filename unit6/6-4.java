@@ -85,18 +85,23 @@ class MyCircle extends MyShape{
     double getPerimeter(){
         return Math.PI*2*radius;
     }
+    double getArea(){
+        return Math.pow(Math.PI*radius,2);
+    }
     String ToString(){
-        return name+"'s variables:\n"+"\ncolor: "+color;
+        return name+"'s variables:\n"+"\ncolor: "+color+"\nradius: "+radius;
     }
 }
 public class MyShapeDriver{
     public static void main(String args[]){
-        MyShape shapes[]=new MyShape[3];
+        MyShape shapes[]=new MyShape[4];
         shapes[0]=new MyRectangle("Rectangle","green",10,15);
         shapes[1]=new MyTrapezoid("Trapezoid","blue",10,15,7,7,6.54);
         shapes[2]=new MyTriangle("Triangle","purple",5,5,5,4.33);
+        shapes[3]=new MyCircle("Circle","black",5);
         for(int i=0;i<shapes.length;i++){
             System.out.println(shapes[i].ToString()+"\n");
+            System.out.println(shapes[i].getPerimeter());
         }
     }
 }
