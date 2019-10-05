@@ -157,14 +157,19 @@ public class TicTacToeWithAI{
                 System.out.println("Hello! Do you wanna play Tic Tac Toe Against an AI? y/n");
                 playAns=input.nextLine();
             }
-            again=true;
             if((playAns.contains("y")&&playAns.contains("n"))||(!playAns.contains("y")&&!playAns.contains("n"))){
                 System.out.println("\fInvalid input! Try again!\n");
             }else if(playAns.contains("n")){
-                System.out.println("\fOkay. Nevermind.");
+                if(again){
+                    System.out.println("\fOkay! see ya!");
+                }else{
+                    System.out.println("\fOkay. Nevermind.");
+                }
                 playYes=false;
             }else if(playAns.contains("y")){
                 System.out.println("\fOkie dokie! Let's-a-go!");
+                again=true;
+                Thread.sleep(100);
                 int[][] gameBoard=new int[3][3];
                 for(int i=0;i<gameBoard.length;i++){
                     for(int j=0;j<gameBoard[0].length;j++){
