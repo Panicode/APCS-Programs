@@ -1,9 +1,3 @@
-//Write a program that gives a prompt to input two integers, then use the new scanner class to enter those two integers. Call those integers number1 and number2. Use ” if statements “ 
-//to determine which integer is larger  and using System.out.println output the statements,
-//“the value of number1 is 5 and it is greater than number2 whose value is 1” or “the value of number2 is 5 and 
-//it is greater than number1 whose value is 1” or  ”number1 and number2 have the same value which is 5”.
-//(the values of number1 and number2 will be entered by the user and can be any integer value).
-
 import java.util.Scanner;
 
 public class IntegerSetup{
