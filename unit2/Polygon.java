@@ -1,4 +1,4 @@
-public class Polygon{
+class Polygon{
     String polyname="";
     int sidecount=0;
     int polylen[]=new int[0];
