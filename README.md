@@ -9,7 +9,7 @@
 
 - [x] Unit1b
 
-- [x] Unit2*
+- [x] Unit2
 
 - [x] Unit3
 
@@ -22,8 +22,6 @@
 
 
 
-
-*Polygon is stupid so it's on hiatus
 
 Note: All units are subject to change, so I'll update the progress accordingly.
 
