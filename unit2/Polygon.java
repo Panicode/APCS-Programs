@@ -44,13 +44,22 @@ public class PolygonDriver{
         double tria=2*Math.PI*trir;
         double trica=tria/trir;
         System.out.println("The primeter is: "+triva);
-        System.out.println("The central angle is: "+trica);
+        System.out.println("The central angle is: 60 degrees\n");
         //tri
         //pent
         int trivd[]={8,8,8,8,8};
         int trivda=0;
         Polygon pentagon001=new Polygon("Pentagon",5,trivd);
         System.out.println(pentagon001);
+        int trivb=0;
+        for(int i=0;i<trivd.length;i++){
+            trivb+=trivd[i];
+        }
+        trir=trivd[0]/Math.sqrt(5);
+        tria=2*Math.PI*trir;
+        trica=tria/trir;
+        System.out.println("The primeter is: "+trivb);
+        System.out.println("The central angle is: 72 degrees\n");
         //pent
     }
 }
