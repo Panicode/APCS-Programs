@@ -1,4 +1,7 @@
-abstract class MyPolygon{
+interface Area{
+    public double getArea();
+}
+abstract class MyPolygon implements Area{
     String name="";
     String color="";
     int leg1=0;
@@ -19,7 +22,7 @@ abstract class MyPolygon{
         return Integer.toString(leg2);
     }
     abstract int getPerimeter();
-    abstract double getArea();
+    public abstract double getArea();
 }
 class MyRect extends MyPolygon{
     MyRect(String na, String co, int len, int wid){
@@ -28,7 +31,7 @@ class MyRect extends MyPolygon{
     int getPerimeter(){
         return leg1*2+leg2*2;
     }
-    double getArea(){
+    public double getArea(){
         return leg1*leg2;
     }
     public String toString(){
@@ -48,7 +51,7 @@ class MyTrap extends MyPolygon{
     int getPerimeter(){
         return leg1+leg2+base1+base2;
     }
-    double getArea(){
+    public double getArea(){
         return (base1+base2)/2*height;
     }
     public String toString(){
@@ -67,7 +70,7 @@ class MyRhom extends MyPolygon{
     int getPerimeter(){
         return leg1*4;
     }
-    double getArea(){
+    public double getArea(){
         return (diag1*diag2)/2;
     }
     public String toString(){
@@ -75,7 +78,7 @@ class MyRhom extends MyPolygon{
         +"\ndiagonal 1: "+diag1+"\ndiagonal 2: "+diag2;
     }
 }
-class MyCirc{
+class MyCirc implements Area{
     private String name;
     private String color;
     private int radius;
@@ -84,11 +87,14 @@ class MyCirc{
         color=co;
         radius=rad;
     }
-    double getArea(){
+    public double getArea(){
         return Math.pow(Math.PI*radius,2);
     }
     double getPerimeter(){
         return 2*Math.PI*radius;
+    }
+    public String toString(){
+        return name+"'s variables:\n"+"\ncolor: "+color+"\nradius: "+radius;
     }
 }
 public class Main{
@@ -97,10 +103,18 @@ public class Main{
         polys[0]=new MyRect("rectangle","blue",3,5);
         polys[1]=new MyTrap("trapezoid","purple",4,4,3,5,6);
         polys[2]=new MyRhom("rhombus","green",5,5,4,6);
+        MyCirc circle=new MyCirc("circle","teal",4);
         for(MyPolygon poly:polys){
             if(poly!=null){
-                System.out.println("\n"+poly);
+                System.out.println("\n"+poly+"\nPerimeter: "+poly.getPerimeter()+"\nArea: "+poly.getArea());
             }
         }
+        System.out.println("\nIMPLEMENTING CIRCLE...\n");
+        for(MyPolygon poly:polys){
+            if(poly!=null){
+                System.out.println("\n"+poly+"\nPerimeter: "+poly.getPerimeter()+"\nArea: "+poly.getArea());
+            }
+        }
+        System.out.println("\n"+circle+"\nPerimeter: "+circle.getPerimeter()+"\nArea: "+circle.getArea());
     }
 }
