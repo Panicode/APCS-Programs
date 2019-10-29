@@ -141,13 +141,12 @@ class TicAI{
         return winner;
     }
 }
-public class TicTacToeWithAI{
-    public static void main(String[] args)throws InterruptedException{
+class TicTacToeWithAI{
+    public static void main(String[] args){
         boolean playYes=true;
         boolean again=false;
         while(playYes){
             Scanner input = new Scanner(System.in);
-            Thread.sleep(200);
             int rounds=0;
             String playAns="";
             if(again){
@@ -169,7 +168,6 @@ public class TicTacToeWithAI{
             }else if(playAns.contains("y")){
                 System.out.println("\fOkie dokie! Let's-a-go!");
                 again=true;
-                Thread.sleep(100);
                 int[][] gameBoard=new int[3][3];
                 for(int i=0;i<gameBoard.length;i++){
                     for(int j=0;j<gameBoard[0].length;j++){
@@ -254,4 +252,9 @@ public class TicTacToeWithAI{
             }
         }
     }
+}
+public class TicTacToe{
+  public static void main(String[] args){
+    new TicTacToeWithAI().main(args);
+  }
 }
