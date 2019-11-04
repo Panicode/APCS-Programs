@@ -11,18 +11,18 @@ class SongLogin{
         System.out.print("password:");
         int inpass=input.nextInt();
         if(inuser.contains(username)&&inpass==password){
-            System.out.println("Login Successful");
+            System.out.println();
+            System.out.print("Login Successful");
             for(int i=0;i<3;i++){
                 try{
                 Thread.sleep(400);
                 System.out.print(".");
                 }catch(InterruptedException e){}
-                System.out.println(2010);
-                System.out.println(1999);
-                System.out.println(2004);
             }
             System.out.println();
-            
+            System.out.println(2010);
+            System.out.println(1999);
+            System.out.println(2004);
         }else{System.out.println("Login Failed.");}
     }
 }
@@ -82,3 +82,15 @@ public class SongDriver{
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
