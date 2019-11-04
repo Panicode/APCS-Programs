@@ -17,7 +17,7 @@ class Display {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //code stops when frame closes
         frame.setResizable(false); //resizability
         frame.setLocationRelativeTo(null); //'null' sets it to the middle of the screen
-        frame.setVisible(true); //visibility
+        frame.setVisible(true); //visibility, JFrames are set to false on startup
     }
 }
 public class Launcher {
