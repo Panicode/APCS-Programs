@@ -9,7 +9,7 @@ class createNewPassword{ // 3.8
             int inlength = inpass.length();
             boolean ch=inpass.matches("^.*[^a-zA-Z0-9 ].*$");
             //System.out.println(inpass.substring(3,4));
-            if(inlength>=6&&ch==true){
+            if(inlength>=6&&ch){
                 System.out.println("\n"+"~Valid Password!~");
                 rest=true;
             }else{
