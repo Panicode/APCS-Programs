@@ -4,7 +4,7 @@ class createNewPassword{ // 3.8
         Scanner input=new Scanner(System.in);
         boolean rest=false;
         System.out.println("Please input a password!"+"\n"+"The password has to have a length of at least 6 characters"+"\n"+"and at least one non-alphanumeric character");
-        while(rest==false){
+        while(!rest){
             String inpass=input.nextLine();
             int inlength = inpass.length();
             boolean ch=inpass.matches("^.*[^a-zA-Z0-9 ].*$");
