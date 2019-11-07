@@ -1,14 +1,3 @@
-/*
-Tetris Applet
-by Melinda Green
-based on Guido Pellegrini's Summer 2000 term project
-
-Use this code for anything you like.
-If you use it in a mission critical application and
-a bug in this code causes a global nuclear war, I will
-take full responsibility and will fix the bug for free.
-*/
-
 import java.awt.*;
 import java.applet.*;
 import java.awt.event.*;
