@@ -3,6 +3,8 @@
 
 <a href="https://sites.google.com/capousd.org/orourkeapcompscia/home">Website</a>
 
+#### Check out master/etcProjects sometime! It can help with designing stuff from scratch!
+
 ###### Units:
 
 - [x] Unit1a
