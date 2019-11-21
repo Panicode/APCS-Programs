@@ -5,14 +5,14 @@ import java.awt.*;
 import javax.imageio.ImageIO;
 import java.io.*;
 import java.net.URL;
-public class Launcher {
+public class Launcher{
     public static void main(String[] args){
-        Main game= new Main("TBG",640,360);
+        Game game= new Game("TBG",640,360);
         game.start();
     }
 }
 
-class Main implements Runnable{ //implements threads
+class Game implements Runnable{ //implements threads
     private Display display;
     public int width, height;
     public String title;
@@ -27,7 +27,7 @@ class Main implements Runnable{ //implements threads
     private State gameState;
     //end States
 
-    public Main(String title,int width,int height){
+    public Game(String title,int width,int height){
         this.width=width;
         this.height=height;
         this.title=title;
