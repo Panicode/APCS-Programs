@@ -75,3 +75,45 @@ public class Driver{
 ```
 
 Please note that all of these variables can actually be objects, methods, etc!
+
+Let's finish what we started, let's put all of this information together and _polymorphically_ print the health of three Entity objects.
+
+```
+abstract class Entities{ //abstract class
+    protected int health;
+    public Entities(int health){
+       this.health=health; 
+    }
+}
+
+class Players extends Entities{ //players
+    public Players(int health){
+        super(health);
+    }
+}
+class Enemies extends Entities{ //enemies
+    public Enemies(int health){
+        super(health);
+    }
+}
+class Items extends Entities{ //items
+    public Items(int health){
+        super(health);
+    }
+}
+public class Driver{
+    public static void main(String[] args){
+        Entities player = new Players(100);
+        Entities enemy = new Enemies(200);
+        Entities item = new Items(0); //Items don't have health, dummy!
+        
+        Entities[] objects={player,enemy,item}; //initializing an array
+        
+        for(Entities ob:objects){
+            System.out.println(ob.health); //polymorphically printing all health of objects
+        }
+    }
+}
+```
+
+### I hope you learned a lot from this!!
