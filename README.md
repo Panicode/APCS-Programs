@@ -1,9 +1,11 @@
+### Reminder: create 'issues' in the top tabs for help on any subject!
+
 # Welcome to The APCS Program Repository! :purple_heart:
 ![Logo](https://i.imgur.com/mZGHSXp.png)
 
 <a href="https://sites.google.com/capousd.org/orourkeapcompscia/home">Website</a>
 
-#### Check out master/etcProjects sometime! It can help with designing stuff from scratch!
+#### Check out my subcategories sometime! Get inspired!
 
 ###### Units:
 
