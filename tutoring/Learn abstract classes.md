@@ -116,4 +116,8 @@ public class Driver{
 }
 ```
 
-### I hope you learned a lot from this!!
+### Abstract classes are primarily used to initiate and call polymorphically with their methods. For example:
+
+There's an animal class, and there's multiple classes that extend from that, ex: dog, cat, bird, lizard. You want to be able to call upon a getter that returns the name for the animal, but polymorphism won't work unless it's the same type of class- OR if it is called from an abstract class.
+
+Good luck!
