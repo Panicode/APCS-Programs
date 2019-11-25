@@ -1,4 +1,4 @@
-### Reminder: create 'issues' in the top tabs for help on any subject!
+### Reminder: create 'issues' in the top tabs for help on any subject! Don't be afraid to ask me questions on github or in person!
 
 # Welcome to The APCS Program Repository! :purple_heart:
 ![Logo](https://i.imgur.com/mZGHSXp.png)
