@@ -5,7 +5,7 @@ import java.awt.*;
 import javax.imageio.ImageIO;
 import java.io.*;
 import java.net.URL;
-public class Launcher{
+public class Main{
     public static void main(String[] args){
         Game game= new Game("DVD Screensaver",640,360);
         game.start();
@@ -167,15 +167,8 @@ class Assets {
     public static BufferedImage player,emptyTile,standTile,woodTile,fuelTank,greySlime,big,small;
 
     public static void init(){
-        SpriteLoader sheet = new SpriteLoader(ImageLoader.loadImage("https://raw.githubusercontent.com/Panicode/TBG/master/resource/textures/sheet.png"));
         SpriteLoader sm= new SpriteLoader(ImageLoader.loadImage("https://raw.githubusercontent.com/Panicode/APCS-Programs/master/etcProjects/littlegame/small%20boy.png"));
         SpriteLoader bg= new SpriteLoader(ImageLoader.loadImage("https://raw.githubusercontent.com/Panicode/APCS-Programs/master/etcProjects/littlegame/big%20boy.png"));
-        player=sheet.crop(0,0,width,height);
-        emptyTile=sheet.crop(0,height*3,width,height);
-        standTile=sheet.crop(width,height*3,width,height);
-        woodTile=sheet.crop(width*2,height*3,width,height);
-        fuelTank=sheet.crop(width*3,height*3,width,height);
-        greySlime=sheet.crop(0, height,width,height);
         big=bg.crop(0, 0,117,58);
         small=sm.crop(0, 0,32,32);
     }
