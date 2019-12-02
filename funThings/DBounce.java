@@ -148,7 +148,6 @@ class ImageLoader{ //just loads images
             return ImageIO.read(url); //returns "BufferedImage" object of a loaded image
         }catch(IOException e){
             e.printStackTrace();
-            System.exit(1); //exits the code efficiently
         }
         return null; //needed in order for java to not be angry at me
     }
