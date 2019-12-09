@@ -1,3 +1,5 @@
+//big yoshi vs. ???
+
 import java.awt.image.*;
 import javax.swing.*;
 import java.awt.*;
@@ -50,6 +52,10 @@ class Main implements Runnable{ //implements threads
         if(State.getState()!=null){ //checks if there's a state active
             State.getState().tick();
         }
+        if(((double)getWidth()/(double)getHeight())!=(16.0/9)){
+            display.getCanvas().setPreferredSize(new Dimension(getWidth(), (int)(getWidth()/(16.0/9))));
+            display.getFrame().pack();
+        }
     }
     private void render(){
         bs = display.getCanvas().getBufferStrategy();/*gets the canvas from the Display class, and then gets a
@@ -61,7 +67,7 @@ class Main implements Runnable{ //implements threads
         }
         g=bs.getDrawGraphics(); //sets graphics to the final buffer.
         //clearing screen
-        g.clearRect(0,0,width,height);
+        //g.clearRect(0,0,width,height);
         //drawing
         if(State.getState()!=null){
             State.getState().render(g);
@@ -97,6 +103,7 @@ class Main implements Runnable{ //implements threads
             if(timer>=1000000000){ //FPS counter!
                 System.out.println("FPS: "+ticks);
                 ticks=0;timer=0;
+                System.out.println();
             }
         }
         stop(); //stops the program when the "running" variable is false
@@ -118,6 +125,12 @@ class Main implements Runnable{ //implements threads
         } catch (InterruptedException e){
             e.printStackTrace();
         }
+    }
+    public int getHeight(){
+        return display.getCanvas().getHeight();
+    }
+    public int getWidth(){
+        return display.getCanvas().getWidth();
     }
 }
 
@@ -163,7 +176,7 @@ class Display {
         frame=new JFrame(title); //setting title of JFrame
         frame.setSize(width,height); //initial width and height
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //code stops when frame closes
-        frame.setResizable(false); //resizability
+        frame.setResizable(true); //resizability
         frame.setLocationRelativeTo(null); //'null' sets it to the middle of the screen
         frame.setVisible(true); //visibility
 
@@ -314,7 +327,7 @@ abstract class Entity{
 abstract class Mob extends Entity{
 
     public static final int DEFAULT_HP=10, DEFAULT_MOB_WIDTH=64, DEFAULT_MOB_HEIGHT=64;
-    public static final float DEFAULT_SPEED=3.0f;
+    public static final float DEFAULT_SPEED=15.0f;
 
     protected int health;
     protected float speed, xMove, yMove;
