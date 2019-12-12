@@ -67,7 +67,7 @@ class Main implements Runnable{ //implements threads
         }
         g=bs.getDrawGraphics(); //sets graphics to the final buffer.
         //clearing screen
-        //g.clearRect(0,0,width,height);
+        g.clearRect(0,0,getWidth(),getHeight());
         //drawing
         if(State.getState()!=null){
             State.getState().render(g);
@@ -251,10 +251,8 @@ class Assets {
     public static BufferedImage big,small;
 
     public static void init(){
-        SpriteLoader sm= new SpriteLoader(ImageLoader.loadImage("https://raw.githubusercontent.com/Panicode/APCS-Programs/master/etcProjects/littlegame/small%20boy.png"));
-        SpriteLoader bg= new SpriteLoader(ImageLoader.loadImage("https://raw.githubusercontent.com/Panicode/APCS-Programs/master/etcProjects/littlegame/big%20boy.png"));
-        big=bg.crop(0, 0,117,58);
-        small=sm.crop(0, 0,32,32);
+        SpriteLoader bg= new SpriteLoader(ImageLoader.loadImage("https://raw.githubusercontent.com/Panicode/APCS-Programs/master/etcProjects/res/big%20yoshi.png"));
+        big=bg.crop(0, 0,128,153);
     }
 }
 class ImageLoader{ //just loads images
@@ -395,6 +393,6 @@ class Player extends Mob{
     }
     @Override
     public void render(Graphics g){
-        g.drawImage(Assets.big,(int)x,(int)y,null);
+        g.drawImage(Assets.big,(int)x,(int)y,game.getWidth()/8,game.getHeight()/4,null);
     }
 }
