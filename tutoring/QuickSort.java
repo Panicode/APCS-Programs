@@ -1,6 +1,6 @@
-public class QuickSort{
+public class quickSort{
     public static void main(String[] args){
-        int[] nums={7,12,4,8,13,7,12,7,3,5,72,6,1,4,6,5,43,4,5,56,1,61,6,1,63};
+        int[] nums=new int[10]; //how many variables i want
         for(int i=0;i<nums.length;i++){
             nums[i]=(int)(Math.random()*100);
         }
