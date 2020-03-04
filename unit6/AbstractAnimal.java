@@ -62,9 +62,11 @@ class Rabbits extends Animal{
 public class AnimalDriver{
     public static void main(String[] args){
         Animal[] Pound={
-            new Dogs(),
             new Dogs("Charles","male",6,"Poodle"),
-            new Dogs("Doggie","male",1,"Shepard"),
+            new Rabbits("Rabbit boy","male",4,true),
             new Cats("Mittens","female",2,"string")};
+        for(Animal x:Pound){
+            System.out.println(x+"\n");
+        }
     }
 }
