@@ -13,7 +13,7 @@ abstract class Animal{
         return name;
     }
     public String toString(){
-        return "Name: "+name+"\nSex: "+sex+"\nage: "+age;
+        return "Name: "+name+"\nSex: "+sex+"\nage: "+age+"\n"+toStringSpecial();
     }
     abstract String toStringSpecial();
 }
@@ -57,5 +57,14 @@ class Rabbits extends Animal{
     }
     public String toStringSpecial(){
         return "Are they fixed? "+isFixed;
+    }
+}
+public class AnimalDriver{
+    public static void main(String[] args){
+        Animal[] Pound={
+            new Dogs(),
+            new Dogs("Charles","male",6,"Poodle"),
+            new Dogs("Doggie","male",1,"Shepard"),
+            new Cats("Mittens","female",2,"string")};
     }
 }
