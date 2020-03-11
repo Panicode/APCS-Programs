@@ -24,7 +24,7 @@ class Rectangle extends Shapes{
         return width*height;
     }
     String toStringSpecial(){
-        return "width: "+width+"height: "+height;
+        return "width: "+width+"\nheight: "+height;
     }
 }
 class Triangle extends Shapes{
@@ -71,6 +71,3 @@ public class ShapeDriver{
         }
     }
 }
-
-
-
